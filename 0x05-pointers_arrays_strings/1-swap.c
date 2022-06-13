@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * swap_int - swap numbers function
+ *swap_int - swap numbers function
  *
- * @a: integer
+ *@a: integer
  *
- * @n: integer
+ *@n: integer
  *
- * Return: nothing
+ *Return: nothing
  */
 
 
