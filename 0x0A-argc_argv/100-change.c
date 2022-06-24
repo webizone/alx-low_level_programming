@@ -15,43 +15,59 @@ int main(int argc, char *argv[])
 
 {
 
-		int num, digit, sum = 0;
+		int a, n = 0, i, t;
+
+			int c[5] = {25, 10, 5, 2, 1};
 
 
 
-			for (num = 1; num < argc; num++)
+				if (argc != 2)
 
-					{
+						{
 
-								for (digit = 0; argv[num][digit]; digit++)
+									puts("Error");
 
-											{
+											return (1);
 
-															if (argv[num][digit] < '0' || argv[num][digit] > '9')
+												}
 
-																			{
+					a = atoi(argv[1]);
 
-																								printf("Error\n");
+						if (a <= 0)
 
-																												return (1);
+								{
 
-																															}
+											puts("0");
 
-																	}
+													return (1);
 
+														}
 
+							else
 
-										sum += atoi(argv[num]);
+									{
 
-											}
+												for (i = 0; i < 5; i++)
 
+															{
 
+																			t = a / c[i];
 
-				printf("%d\n", sum);
+																						a -= t * c[i];
 
+																									n += t;
 
+																												if (a == 0)
 
-					return (0);
+																																	break;
+
+																														}
+
+													}
+
+								printf("%d\n", n);
+
+									return (0);
 
 }
 
